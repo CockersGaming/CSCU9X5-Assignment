@@ -1,0 +1,50 @@
+.sm-header {
+  color: white;
+  height: 50vh;
+}
+
+.learning {
+  height: 100%;
+}
+
+.javaBtn {
+    text-decoration: none !important;
+    color: transparent;
+}
+
+.javaBtn:hover {
+  cursor: pointer;
+}
+
+.cBtn {
+    text-decoration: none !important;
+    color: transparent;
+}
+
+.cBtn:hover {
+    cursor: pointer;
+}
+
+.pythonBtn {
+    text-decoration: none !important;
+    color: transparent;
+}
+
+.pythonBtn:hover {
+    cursor: pointer;
+    color: #5283a2;
+}
+
+.card {
+    outline: none !important;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+.card-footer {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.modal-header {
+    border: none !important;
+}
