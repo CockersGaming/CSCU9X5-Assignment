@@ -21,14 +21,56 @@
             <div class="container"><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler float-end" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="border-style: none;"><i class="fa fa-bars" style="color: rgb(255,255,255);border-color: rgba(255,255,255,0);"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item" style="color: rgb(255,255,255);"><a class="nav-link btn btn-outline-primary" href="../courses.html#features">Exit</a></li>
+                        <li class="nav-item" style="color: rgb(255,255,255) !important;"><a class="nav-link btn btn-outline-primary" href="../courses.html#courses">Exit</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <section>
             <div class="container">
-
+                <div class="row m-2 p-2">
+                    <div class="progress p-3">
+                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="tab-1">
+                        <div class="card bg-dark text-white p-5">
+                            <div class="card-title text-center">
+                                <h1>Data Types</h1>
+                            </div>
+                            <div class="card-body">
+                                <dl>
+                                    <dt>String</dt>
+                                    <dd>- stores characters surounded by double quotes, "hello"</dd>
+                                    <br>
+                                    <dt>int</dt>
+                                    <dd>- stores whole numbers such as 1, 257, 1050</dd>
+                                    <br>
+                                    <dt>float</dt>
+                                    <dd>- stores floting point numbers such as 1.5, 2.57, 105.015</dd>
+                                    <br>
+                                    <dt>char</dt>
+                                    <dd>- stores individual characters in single quotes such as 'a', 'f', 'x'</dd>
+                                    <br>
+                                    <dt>boolean</dt>
+                                    <dd>- stores values which represent two states: true or false</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-3">
+                        <button class="btn btn-info">Previous</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-primary">Finish</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-danger">Next</button>
+                    </div>
+                </div>
             </div>
         </section>
         <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
@@ -36,5 +78,4 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
         <script src="../assets/js/main.js"></script>
     </body>
-
 </html>
