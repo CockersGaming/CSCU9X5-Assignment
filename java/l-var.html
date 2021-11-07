@@ -14,9 +14,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
         <link rel="stylesheet" href="../assets/css/main.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 
-    <body class="bg-dark" id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56">
+    <body class="bg-dark" id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56" style="overflow: hidden;">
         <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style="background: rgba(27,27,27,0.16);">
             <div class="container"><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler float-end" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="border-style: none;"><i class="fa fa-bars" style="color: rgb(255,255,255);border-color: rgba(255,255,255,0);"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -28,47 +29,96 @@
         </nav>
         <section>
             <div class="container">
-                <div class="row m-2 p-2">
-                    <div class="progress p-3">
-                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="row p-4"> 
+                    <div class="col w-100">
+                        <div class="progress active">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div id="tab-1">
-                        <div class="card bg-dark text-white p-5">
-                            <div class="card-title text-center">
-                                <h1>Data Types</h1>
+                    <div class="col-md-12 mx-0">
+                        <div class="justify-content-center" style="display: none;" id="slide-1">
+                            <div class="card bg-dark text-white p-5">
+                                <div class="card-title text-center">
+                                    <h1>Data Types</h1>
+                                </div>
+                                <div class="card-body text-center">
+                                    <p>A data type is an attribute of data which is defined by the values it can take. It also allows the compiler/interpreter to understand how the programmer wants to use the data.</p>
+                                    <dl>
+                                        <dt>String</dt>
+                                        <dd>- stores characters surounded by double quotes, "hello"</dd>
+                                        <br>
+                                        <dt>int</dt>
+                                        <dd>- stores whole numbers such as 1, 257, 1050</dd>
+                                        <br>
+                                        <dt>float</dt>
+                                        <dd>- stores floting point numbers such as 1.5, 2.57, 105.015</dd>
+                                        <br>
+                                        <dt>char</dt>
+                                        <dd>- stores individual characters in single quotes such as 'a', 'f', 'x'</dd>
+                                        <br>
+                                        <dt>boolean</dt>
+                                        <dd>- stores values which represent two states: true or false</dd>
+                                    </dl>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <dl>
-                                    <dt>String</dt>
-                                    <dd>- stores characters surounded by double quotes, "hello"</dd>
-                                    <br>
-                                    <dt>int</dt>
-                                    <dd>- stores whole numbers such as 1, 257, 1050</dd>
-                                    <br>
-                                    <dt>float</dt>
-                                    <dd>- stores floting point numbers such as 1.5, 2.57, 105.015</dd>
-                                    <br>
-                                    <dt>char</dt>
-                                    <dd>- stores individual characters in single quotes such as 'a', 'f', 'x'</dd>
-                                    <br>
-                                    <dt>boolean</dt>
-                                    <dd>- stores values which represent two states: true or false</dd>
-                                </dl>
+                        </div>
+                        <div class="justify-content-center" style="display: none;" id="slide-2">
+                            <div class="card bg-dark text-white p-5">
+                                <div class="card-title text-center">
+                                    <h1>Declaring a Variable</h1>
+                                </div>
+                                <div class="card-body text-center">
+                                    <p>Bellow shows how to declare a variable</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="justify-content-center" style="display: none;" id="slide-3">
+                            <div class="card bg-dark text-white p-5">
+                                <div class="card-title text-center">
+                                    <h1>Declaring a Variable</h1>
+                                </div>
+                                <div class="card-body text-center">
+                                    <p>Bellow shows how to declare a variable</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="justify-content-center" style="display: none;" id="slide-4">
+                            <div class="card bg-dark text-white p-5">
+                                <div class="card-title text-center">
+                                    <h1>Declaring a Variable</h1>
+                                </div>
+                                <div class="card-body text-center">
+                                    <p>Bellow shows how to declare a variable</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="justify-content-center" style="display: none;" id="slide-5">
+                            <div class="card bg-dark text-white p-5">
+                                <div class="card-title text-center">
+                                    <h1>Declaring a Variable</h1>
+                                </div>
+                                <div class="card-body text-center">
+                                    <p>Bellow shows how to declare a variable</p>
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-3">
-                        <button class="btn btn-info">Previous</button>
+                <div class="row w-100 p-3">
+                    <div class="col-4">
+                        <button id="previous" disabled type="button" class="btn btn-secondary">Previous</button>
                     </div>
-                    <div class="col-3">
-                        <button class="btn btn-primary">Finish</button>
+                    <div class="col-4 text-center">
+                        <button id="save" type="button" class="btn btn-info">Save and Quit</button>
                     </div>
-                    <div class="col-3">
-                        <button class="btn btn-danger">Next</button>
+                    <div class="col-4">
+                        <button id="next" type="button" class="btn btn-primary" style="float: right;">Next</button>
                     </div>
                 </div>
             </div>
@@ -76,6 +126,8 @@
         <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="../assets/js/bs-init.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
         <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/learning.js"></script>
     </body>
 </html>
