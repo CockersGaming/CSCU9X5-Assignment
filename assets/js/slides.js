@@ -18,14 +18,28 @@ $(function() {
     buttonVisability(slide)
 
 
+    // start button
+    $('#start').on('click', function() {
+        $('#slide-1').css("display","none")
+        slide++
+        buttonVisability(slide)
+        updateProgressBar(slide)
+        if(slide <= 5) {
+            $('#slide-' + slide).css("display", "block")
+            window.localStorage.setItem('slide', slide)
+        }
+    })
+
     // go to next slide
     $('#next').on('click', function() {
         $('#slide-' + slide).css("display","none")
         slide++
         buttonVisability(slide)
         updateProgressBar(slide)
-        if(slide <= 5)
+        if(slide <= 5) {
             $('#slide-' + slide).css("display", "block")
+            window.localStorage.setItem('slide', slide)
+        }
     })
 
 
@@ -36,8 +50,10 @@ $(function() {
         slide--
         buttonVisability(slide)
         updateProgressBar(slide)
-        if(slide >= 1)
+        if(slide >= 1) {
             $('#slide-' + slide).css("display", "block")
+            window.localStorage.setItem('slide', slide)
+        }
     })
 
     // function to increment/decrement progress bar
@@ -78,13 +94,19 @@ $(function() {
     function buttonVisability(sl) {
         if(sl >= 1 && sl <= 5) {
             if(sl == 1) {
-                $('#next').prop('disabled', false)
-                $('#previous').prop('disabled', true)
+                $('#next').prop('hidden', true)
+                $('#previous').prop('hidden', true)
+                $('#save1').prop('hidden', true)
             } else if(sl > 1 && sl < 5) {
                 $('#next').prop('disabled', false)
                 $('#previous').prop('disabled', false)
+                $('#next').prop('hidden', false)
+                $('#previous').prop('hidden', false)
+                $('#save').prop('hidden', false)
             } else if(sl == 5) {
                 $('#next').prop('disabled', true)
+                $('#next').prop('hidden', true)
+                $('#save1').prop('hidden', true)
                 $('#previous').prop('disabled', false)
             }
         }
@@ -94,9 +116,24 @@ $(function() {
      * Save and Quit
      */
 
-    $('#save').on('click', function() {
+    function saveExit() {
         let currentSlide = slide
         window.localStorage.setItem('slide', currentSlide)
-        window.location.href='../courses.html#courses';
+        window.location.href='../courses.html#courses'
+    }
+
+    $('#save1').on('click', function() {
+        saveExit()
+    })
+    $('#save2').on('click', function() {
+        saveExit()
+    })
+
+    /**
+     * Challange
+     */
+
+    $('#challange').on('click', function() {
+        window.location.href='c-var.html'
     })
 })

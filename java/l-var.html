@@ -11,10 +11,10 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli"/>
         <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+        <link rel="stylesheet" href="../assets/css/animate.min.css"/>
+        <link rel="stylesheet" href="../assets/css/aos.css"/>
         <link rel="stylesheet" href="../assets/css/main.css"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="../assets/js/jquery.min.js"></script>
     </head>
 
     <body class="bg-dark" id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56" style="overflow: hidden;">
@@ -41,6 +41,20 @@
                         <div class="justify-content-center" style="display: none;" id="slide-1">
                             <div class="card bg-dark text-white p-5">
                                 <div class="card-title text-center">
+                                    <h1>Welcome to Learning the basics of Variables!</h1>
+                                </div>
+                                <div class="card-body text-center">
+                                    <p>To get the best experiance of this course use a laptop or desktop!</p>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <a class="btn btn-success" id="start">Start</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="justify-content-center" style="display: none;" id="slide-2">
+                            <div class="card bg-dark text-white p-4">
+                                <div class="card-title text-center">
                                     <h1>Data Types</h1>
                                 </div>
                                 <div class="card-body text-center">
@@ -64,47 +78,120 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="justify-content-center" style="display: none;" id="slide-2">
-                            <div class="card bg-dark text-white p-5">
-                                <div class="card-title text-center">
-                                    <h1>Declaring a Variable</h1>
-                                </div>
-                                <div class="card-body text-center">
-                                    <p>Bellow shows how to declare a variable</p>
-                                    
-                                </div>
-                            </div>
-                        </div>
                         <div class="justify-content-center" style="display: none;" id="slide-3">
-                            <div class="card bg-dark text-white p-5">
+                            <div class="card bg-dark text-white p-4">
                                 <div class="card-title text-center">
                                     <h1>Declaring a Variable</h1>
                                 </div>
                                 <div class="card-body text-center">
-                                    <p>Bellow shows how to declare a variable</p>
-                                    
+                                    <p>Bellow shows how to declare variables in Java. We will use the data types you learnt on the previous page.</p>
+                                    <h4><b>Remember to end a line of code in Java with a semi-colon!</b></h4>
+                                    <br>
+                                    <dl>Declaring a String</dl>
+                                    <dd>
+                                        <code>String exampleName = "Hello World";</code>
+                                    </dd>
+                                    <dl>Declaring an Integer</dl>
+                                    <dd>
+                                        <code>int exampleName = 123;</code>
+                                    </dd>
+                                    <dl>Declaring a Float</dl>
+                                    <dd>
+                                        <code>float exampleName = 123.456;</code>
+                                    </dd>
+                                    <dl>Declaring a char</dl>
+                                    <dd>
+                                        <code>char exampleName = 'h';</code>
+                                    </dd>
+                                    <dl>Declaring a Boolean</dl>
+                                    <dd>
+                                        <code>boolean exampleName = false;</code>
+                                    </dd>
+                                    <p>As you can see we state the data type first then type the name of the variable. We can then assign that variable a value.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="justify-content-center" style="display: none;" id="slide-4">
                             <div class="card bg-dark text-white p-5">
                                 <div class="card-title text-center">
-                                    <h1>Declaring a Variable</h1>
+                                    <h1>How to use variables to perform maths</h1>
                                 </div>
                                 <div class="card-body text-center">
-                                    <p>Bellow shows how to declare a variable</p>
-                                    
+                                    <p>Variables are used to store data. However we can use variables to perform actions such as addition, division, splitting strings, etc...</p>
+                                    <div class="d-flex align-items-start">
+                                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                          <button class="nav-link active" id="adding-tab" data-bs-toggle="pill" data-bs-target="#adding" type="button" role="tab" aria-controls="adding" aria-selected="true">Adding</button>
+                                          <button class="nav-link" id="subtracting-tab" data-bs-toggle="pill" data-bs-target="#subtracting" type="button" role="tab" aria-controls="subtracting" aria-selected="false">Subtracting</button>
+                                          <button class="nav-link" id="multiplying-tab" data-bs-toggle="pill" data-bs-target="#multiplying" type="button" role="tab" aria-controls="multiplying" aria-selected="false">Multiplying</button>
+                                          <button class="nav-link" id="division-tab" data-bs-toggle="pill" data-bs-target="#division" type="button" role="tab" aria-controls="division" aria-selected="false">Division</button>
+                                        </div>
+                                        <div class="tab-content w-100" id="v-pills-tabContent">
+                                            <div class="tab-pane fade show p-2 active" id="adding" role="tabpanel" aria-labelledby="adding-tab">
+                                                First we need to declare two variables
+                                                <br>
+                                                <code>int exampleNumber1 = 6;<br>int exampleNumber2 = 8;</code>
+                                                <br>
+                                                To add these we can create a new variable called sum and then add the two variables together using the <code>+</code> oporator
+                                                <br>
+                                                <code>int sum = exampleNumber1 + exampleNumber2;</code>
+                                                <br>
+                                                If we were to print <code>sum</code> we would get 16
+                                            </div>
+                                            <div class="tab-pane fade p-2" id="subtracting" role="tabpanel" aria-labelledby="subtracting-tab">
+                                                First we need to declare two variables
+                                                <br>
+                                                <code>int exampleNumber1 = 6;<br>int exampleNumber2 = 8;</code>
+                                                <br>
+                                                To subtract these we can create a new variable called sum and then subtract the two variables using the <code>-</code> oporator
+                                                <br>
+                                                <code>int sum = exampleNumber1 - exampleNumber2;</code>
+                                                <br>
+                                                If we were to print <code>sum</code> we would get -2
+                                            </div>
+                                            <div class="tab-pane fade p-2" id="multiplying" role="tabpanel" aria-labelledby="multiplying-tab">
+                                                First we need to declare two variables
+                                                <br>
+                                                <code>int exampleNumber1 = 6;<br>int exampleNumber2 = 8;</code>
+                                                <br>
+                                                To multiply these we can create a new variable called sum and then multiply the two variables together by using the <code>*</code> oporator
+                                                <br>
+                                                <code>int sum = exampleNumber1 * exampleNumber2;</code>
+                                                <br>
+                                                If we were to print <code>sum</code> we would get 48
+                                            </div>
+                                            <div class="tab-pane fade p-2" id="division" role="tabpanel" aria-labelledby="division-tab">
+                                                First we need to declare two variables
+                                                <br>
+                                                <code>int exampleNumber1 = 6;<br>int exampleNumber2 = 8;</code>
+                                                <br>
+                                                To divide these we can create a new variable called sum and then divide the two variables together by using the <code>/</code> oporator
+                                                <br>
+                                                <code>int sum = exampleNumber1 / exampleNumber2;</code>
+                                                <br>
+                                                If we were to print <code>sum</code> we would get 0 because int only stores whole numbers.
+                                                <br>
+                                                If we wanted the acurate sum we would need to change <code>exampleNumber1</code> and <code>exampleNumber2</code> to type float.
+                                                <br>
+                                                If we did that and printed <code>sum</code>, would be 0.75
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="justify-content-center" style="display: none;" id="slide-5">
                             <div class="card bg-dark text-white p-5">
                                 <div class="card-title text-center">
-                                    <h1>Declaring a Variable</h1>
+                                    <h1>This is the end of the learning course!</h1>
                                 </div>
                                 <div class="card-body text-center">
-                                    <p>Bellow shows how to declare a variable</p>
-                                    
+                                    <p>If you would like to do a challange click the button bellow. If not press the Save and Exit Button.</p>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <button class="btn btn-primary" id="challange">Challange</button>
+                                    <br><br><br>
+                                    <button id="save2" type="button" class="btn btn-info">Save and Quit</button>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +202,7 @@
                         <button id="previous" disabled type="button" class="btn btn-secondary">Previous</button>
                     </div>
                     <div class="col-4 text-center">
-                        <button id="save" type="button" class="btn btn-info">Save and Quit</button>
+                        <button id="save1" type="button" class="btn btn-info">Save and Quit</button>
                     </div>
                     <div class="col-4">
                         <button id="next" type="button" class="btn btn-primary" style="float: right;">Next</button>
@@ -125,9 +212,8 @@
         </section>
         <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="../assets/js/bs-init.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+        <script src="../assets/js/aos.js"></script>
         <script src="../assets/js/main.js"></script>
-        <script src="../assets/js/learning.js"></script>
+        <script src="../assets/js/slides.js"></script>
     </body>
 </html>

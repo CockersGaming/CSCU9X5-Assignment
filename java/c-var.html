@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
     <head>
         <meta charset="utf-8" />
@@ -11,39 +11,141 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli"/>
         <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+        <link rel="stylesheet" href="../assets/css/animate.min.css"/>
+        <link rel="stylesheet" href="../assets/css/aos.css"/>
         <link rel="stylesheet" href="../assets/css/main.css"/>
+        <link rel="stylesheet" href="../assets/css/challange.css"/>
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery-ui.min.js" type="text/javascript"></script>
     </head>
 
-    <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56">
+    <body class="bg-dark" id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56" style="overflow: hidden;">
         <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style="background: rgba(27,27,27,0.16);">
             <div class="container"><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler float-end" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="border-style: none;"><i class="fa fa-bars" style="color: rgb(255,255,255);border-color: rgba(255,255,255,0);"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item" style="color: rgb(255,255,255);"><a class="nav-link" href="../index.html">home</a></li>
-                        <li class="nav-item" style="color: rgb(255,255,255);"><a class="nav-link" href="../about.html">about</a></li>
-                        <li class="nav-item" style="color: rgb(255,255,255);"><a class="nav-link" href="../courses.html">courses</a></li>
+                        <li class="nav-item" style="color: rgb(255,255,255) !important;"><a class="nav-link btn btn-outline-primary" href="../courses.html#courses">Exit</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <header class="masthead" style="background: url('../assets/img/bg-pattern.png'), linear-gradient(to left, #7b4397, #dc2430);">
-            <div class="container h-100">
-                <div class="row h-100">
-                    <div class="col-lg-7 my-auto">
-                        <div class="mx-auto header-content">
-                            <h1 class="rubberBand animated mb-5">The C# courses will be coming soon!</h1><a class="btn btn-outline-warning rubberBand animated btn-xl" role="button" href="courses.html">Start Now for Free!</a>
+        <section>
+            <div class="container">
+                <div class="row p-4"> 
+                    <div class="col w-100">
+                        <div class="progress active">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12 mx-0">
+                        <div class="justify-content-center" style="display: none;" id="slide-1">
+                            <div class="card bg-dark text-white p-5 h-100">
+                                <div class="card-title text-center">
+                                    <h1>Welcome to the basics of Variables Challange!</h1>
+                                </div>
+                                <div class="card-body text-center">
+                                    <p>To get the best experiance of this course use a laptop or desktop!</p>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <a class="btn btn-success" id="start">Start</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="justify-content-center" style="display: none;" id="slide-2">
+                            <div class="card bg-dark text-white p-4">
+                                <div class="card-title text-center">
+                                    <h1>Drag and Drop the words to create a correct variable declaration!</h1>
+                                </div>
+                                <div class="row w-100">
+                                    <div class="col-2">
+                                        <div class="card-body text-center">
+                                            <div class="options">
+                                                <ul style="list-style-type:none;" id="draggable">
+                                                    <li class="outline bg-success disable-select">;</li>
+                                                    <li class="outline bg-warning text-dark disable-select">5.4</li>
+                                                    <li class="outline bg-info text-dark disable-select">example</li>
+                                                    <li class="outline bg-danger disable-select">float</li>
+                                                    <li class="outline bg-primary text-dark disable-select">=</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-10 justify-content-center align-items-center">
+                                        <div class="row w-100 h-100">
+                                            <div class="col">
+                                                <input id="i1" type="text" name="program" class="form-control color ui-droppable">
+                                            </div>
+                                            <div class="col">
+                                                <input id="i2" type="text" name="program" class="form-control color ui-droppable">
+                                            </div>
+                                            <div class="col">
+                                                <input id="i3" type="text" name="program" class="form-control color ui-droppable">
+                                            </div>
+                                            <div class="col">
+                                                <input id="i4" type="text" name="program" class="form-control color ui-droppable">
+                                            </div>
+                                            <div class="col">
+                                                <input id="i5" type="text" name="program" class="form-control color ui-droppable">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-5">
+                                    <div class="col text-center">
+                                        <a class="btn btn-success" id="reset">Reset</a>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="justify-content-center" style="display: none;" id="slide-3">
+                            <div class="card bg-dark text-white p-4">
+                                
+                            </div>
+                        </div>
+                        <div class="justify-content-center" style="display: none;" id="slide-4">
+                            <div class="card bg-dark text-white p-5">
+                                
+                            </div>
+                        </div>
+                        <div class="justify-content-center" style="display: none;" id="slide-5">
+                            <div class="card bg-dark text-white p-5">
+                                <div class="card-title text-center">
+                                    <h1>This is the end of the challange!</h1>
+                                </div>
+                                <div class="card-body text-center">
+                                    <p>You got /5</p>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <button class="btn btn-primary" id="challange">Challange</button>
+                                    <br><br><br>
+                                    <button id="save2" type="button" class="btn btn-info">Save and Quit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row w-100 p-3">
+                    <div class="col-4">
+                        <button id="previous" disabled type="button" class="btn btn-secondary">Previous</button>
+                    </div>
+                    <div class="col-4 text-center">
+                        <button id="save1" type="button" class="btn btn-info">Save and Quit</button>
+                    </div>
+                    <div class="col-4">
+                        <button id="next" type="button" class="btn btn-primary" style="float: right;">Next</button>
+                    </div>
+                </div>
             </div>
-        </header>
+        </section>
         <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="../assets/js/bs-init.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="../assets/js/aos.js"></script>
         <script src="../assets/js/main.js"></script>
-        <script src="../assets/js/learning.js"></script>
+        <script src="../assets/js/slides.js"></script>
+        <script src="../assets/js/challange.js"></script>
     </body>
-
 </html>

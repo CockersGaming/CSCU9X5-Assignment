@@ -1,0 +1,24 @@
+.outline {
+    text-align:center;
+    cursor:pointer;
+    margin-top:5px;
+    line-height:40px;
+    list-style:none;
+    border-radius:20px;
+    height:40px;
+    width:110px;
+}
+
+.outline li:hover { 
+    box-shadow: inset 0 0 10px black; cursor:none; 
+}
+
+input {
+    display: inline-block;
+    height:40px;
+    width:100%;
+    min-width:20px;
+    outline:none;
+    border:none;
+    vertical-align:middle;
+}
