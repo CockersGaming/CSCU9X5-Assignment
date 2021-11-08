@@ -43,32 +43,35 @@ $(function() {
     // function to increment/decrement progress bar
     function updateProgressBar(s) {
         let value = 0
+        let currentSlide = "" + s + ""
 
-        console.log(s)
-
-        switch(s) {
-            case 1:
+        switch(currentSlide) {
+            case "1":
                 value = 0
                 break
             
-            case 2:
+            case "2":
                 value = 25
                 break
             
-            case 3:
+            case "3":
                 value = 50
                 break
             
-            case 4:
+            case "4":
                 value = 75
                 break
 
-            case 5:
+            case "5":
                 value = 100
+                break
+
+            default:
+                value = 0
                 break
         }
 
-        $('.progress-bar').css('width', value+'%').attr('aria-valuenow', value);
+        $('.progress-bar').css('width', value + '%').attr('aria-valuenow', value);
     }
 
     // function to change the usability of next and previous buttons
